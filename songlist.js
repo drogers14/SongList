@@ -10,11 +10,12 @@ function Song(title,artist,album,year)
   this.album = album;
   this.year = year;
   this.toString = function(){
-    return this.title + " by " + this.artist;
+    return this.song + " by " + this.artist +" " + "Released on " + this.album +
+    " in " + this.year;
   }
-  this.releaseInfo = function(){
-    return "Released on " + this.album + " in " + this.year;
-  };
+//  this.releaseInfo = function(){
+  //  return "Released on " + this.album + " in " + this.year;
+//  }
   this.listened = 0;
   this.play = function(){
     this.listened++;
@@ -45,3 +46,7 @@ function displaySong()
 {
   document.getElementById("nowPlaying").innerHTML = allSongs[current].toString();
 }
+//function displayInfo()
+//{
+  // document.getElementById("songInfo").innerHTML = allSongs[current].releaseInfo();
+//}
